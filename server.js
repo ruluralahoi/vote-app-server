@@ -33,6 +33,11 @@ app.get('/api/votes', (req, res) => {
   res.status(200).json(votes);
 });
 
+// 루트 경로에 대한 핸들러 추가
+app.get('/', (req, res) => {
+  res.send('Welcome to the Vote App Server!');
+});
+
 // 서버 시작
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
